@@ -2,13 +2,14 @@
     <string name="app_name">About Me</string>
     <string name="name">Maral Baybolova</string>
     <string name="yellow_star">Yellow star</string>
-    <string name="bio">I like learning new skills and recently I have been interested in exploring different languages as they help me explore new cultures around the world.
-        \nI started learning Spanish online and I have already cleared the beginner level.
-        \nI generally spend my weekends focusing on exploring new Spanish words and watching Spanish movies to strengthen my grasp over the language.
-        \nI have a pet dog named Cookie and spending time with him is one of my favourite things to do.
-        \nI also love to travel and I often plan trips with my family.
-        \nBut solo travelling gives me the bliss that I crave for.
-        \nEvery year I look forward to exploring new places and catching up on some lifetime memories.
-        \nI love playing football in my free time as it helps me unwind, relax as well as boosts my creativity and analytical thinking skills.
-    </string>>
+    <string name="bio">"I like learning new skills and recently I have been interested in exploring different languages as they help me explore new cultures around the world.&lt;br /&gt;&lt;br /&gt;I started learning Spanish online and I have already cleared the beginner level.&lt;br /&gt;&lt;br /&gt;
+        I generally spend my weekends focusing on exploring new Spanish words and watching Spanish movies to strengthen my grasp over the language.&lt;br /&gt;&lt;br /&gt;
+        I have a pet dog named Cookie and spending time with him is one of my favourite things to do.&lt;br /&gt;&lt;br /&gt;
+        I also love to travel and I often plan trips with my family.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+        But solo travelling gives me the bliss that I crave for.&lt;br /&gt;&lt;br /&gt;
+        Every year I look forward to exploring new places and catching up on some lifetime memories.&lt;br /&gt;
+        I love playing football in my free time as it helps me unwind, relax as well as boosts my creativity and analytical thinking skills.\n\n"
+    </string>
+    <string name="what_is_your_nickname">What is your Nickname?</string>
+    <string name="done">Done</string>>
 </resources>
