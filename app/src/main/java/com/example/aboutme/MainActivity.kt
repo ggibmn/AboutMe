@@ -5,31 +5,48 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import com.example.aboutme.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
+//    private val myName: MyName = MyName("Project Name")
+
+    //экземпляр класса myName
+    private val myName: MyName = MyName("Project Name")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+//        setContentView(R.layout.activity_main)
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.myName = myName
 
         //on clickListener
-        findViewById<Button>(R.id.done_button).setOnClickListener() {
+//        findViewById<Button>(R.id.done_button).setOnClickListener() {
+//            addNickname(it)
+//        }
+
+        binding.doneButton.setOnClickListener() {
             addNickname(it)
         }
     }
 
     private fun addNickname(view: View) {
-        val editText = findViewById<EditText>(R.id.nickname_edit)
-        val nicknameTextView = findViewById<TextView>(R.id.nickname_text)
 
-        nicknameTextView.text = editText.text
+        binding.apply {
+            myName?.nickname = nicknameEdit.text.toString()
+            nicknameText.text = binding.nicknameEdit.text
+            invalidateAll() //Чтобы экран получил новые данные, надо снова передать биндингу измененный объект
+            //change visibility of edit and done_button to GONE
+            nicknameText.visibility = View.GONE
+            doneButton.visibility = View.GONE
+            nicknameText.visibility = View.VISIBLE
+        }
 
-        //change visibility of edit and done_button to GONE
-        editText.visibility = View.GONE
-        view.visibility = View.GONE
-        nicknameTextView.visibility = View.VISIBLE
 
         //hide keyboard after onClick
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
